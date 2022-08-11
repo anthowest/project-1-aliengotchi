@@ -6,16 +6,26 @@
 body {
     text-align: center;
     margin: auto;
+    margin: 0 auto;
     font-family: 'Jura', sans-serif;
     color: black;
     background-color: grey;
 }
 
 h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(108,196,23);
     font-family: 'Orbitron', sans-serif;
-    grid-column: 1;
-    grid-row: 1;
+}
+
+.container-main {
+    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
 }
 
 h3 {
