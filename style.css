@@ -28,6 +28,12 @@ h1 {
     justify-content: center;
 }
 
+#alien-body {
+    height: auto;
+    width: 150px;
+    padding-bottom: 20px;
+}
+
 h3 {
     font-family: 'Jura', sans-serif;
     color: #7118C4;
