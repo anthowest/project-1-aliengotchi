@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura&family=Orbitron:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400&family=Orbitron:wght@500&display=swap');
 
-
 body {
     text-align: center;
     margin: 0 auto;
@@ -45,6 +44,9 @@ p {
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-content: center;
+    max-height: 600px;
+    max-width: 1000px;
+    /* margin: auto; */
 }
 
 #alien-name {
