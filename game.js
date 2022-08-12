@@ -1,4 +1,3 @@
-console.log('game-js loaded')
 
 // ACTIONS
     // Feed
@@ -23,6 +22,11 @@ const actionBtn = document.querySelector('.action-buttons');
 let mainPage = document.querySelector('.main-screen');
 let gamePage = document.querySelector('.game-screen');
 const screen = document.querySelector('.screen');
+
+let aImg = document.querySelector('#alien-body');
+
+let message = document.querySelector('.message');
+
 // TIME
 let ticks = 0;
 
@@ -45,9 +49,8 @@ class Aliengotchi {
     }
 }
 
-// NEW PET
+// NEW ALIEN
 const alien = new Aliengotchi();
-// console.log(alien)
 
 // EVENT LISTENERS
 feedBtn.addEventListener('click', function() {
@@ -71,34 +74,40 @@ function startGame() {
     document.querySelector('.game-screen').classList.toggle('hide');
     }
 
+function loseAction() {
+    document.querySelector('.action-buttons').classList.toggle('hide');
+    aImg.src = './Assets/alien-died.png';
+}
+
 let interval = setInterval(alienFunction, 500); 
-// let imgInterval = setInterval(changeImg, 200);   
-// let aImg = document.querySelector('#alien-name');
 
 // ALIEN FUNCTION 
 function alienFunction() {
     hMeter.value = alien.hunger;
     hapMeter.value = alien.happiness;
     alien.ticks();
-    if ((hMeter.value <= 75) || (hapMeter.value <= 75)) {
-        // aImg.src = './Assets/alien-happy.png'
+    if ((hMeter.value >= 60) || (hapMeter.value >= 60)) {
+        aImg.src='./Assets/alien-happy.png';
+    };
+
+    if (hapMeter.value <= 60) {
+        aImg.src = './Assets/alien-sad.png';
+    };
+
+    if (hMeter.value <= 60) {
+        aImg.src = './Assets/alien-hungry.png';
     };
         
-    if ((hMeter.value <= 50) || (hapMeter.value <= 50)) {
-            // show message
-    };
-        
-    if ((hMeter.value <= 25) || (hapMeter.value <= 25)) {
-            // changeImg('./Assets/alien-sad.png');
+    if ((hMeter.value <= 33) || (hapMeter.value <= 33)) {
+        aImg.src = './Assets/alien-sad.png';
     };
         
     if ((hMeter.value <= 0) || (hapMeter.value <= 0)) {
-        // document.querySelector('#alien-name').src = 'alien-sad.png';
         clearInterval(interval);
-        // aImg.src = "/alien-sad.png";
+        loseAction();
+        message.innerHTML = 'You done now lost!'
     };
     }
-
 
 let hMeter = document.querySelector('#hunger')
 let hapMeter = document.querySelector('#happiness')
@@ -109,8 +118,3 @@ function getNameValue() {
     let alienName = document.querySelector('#name-input').value;
     document.querySelector('#alien-name').innerHTML = alienName
 }
-
-// function changeImg(a) {
-//         document.querySelector('#alien-name').src = a;
-//     };
-
