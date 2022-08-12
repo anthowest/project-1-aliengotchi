@@ -10,9 +10,6 @@
     // Player wins after keeping pet alive after time threshold
     // Player loses when happiness and hunger meters hit 0 before time threshold
 
-// GAME SETTING // VARIABLES
-const maxHunger = 100;
-const maxHappiness = 100;
 // BUTTONS
 const startBtn = document.querySelector('#start-button');
 const feedBtn = document.querySelector('#feed-button');
