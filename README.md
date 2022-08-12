@@ -1,8 +1,4 @@
 
-## **Necessary Deliverables**
-
-☐ The code for **a working game that meets or exceeds the above technical requirements, built by you, and hosted on GitHub Pages** (covered next week).
-
 - **A `README.md` file** with these sections:
     
     ☐ **Aliengotchi**: Player has been given the task to name and take care of the family's new alien. Player must stay active to keep their alien alive. If the alien's hunger and/or happiness meter hits 0% - player loses. 
