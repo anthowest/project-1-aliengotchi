@@ -1,20 +1,9 @@
-
-// ACTIONS
-    // Feed
-    // Pet
-
-// Player will start the game by entering their pet alien's name and hitting the start button. 
-// Player will have to interact (feed & pet) with the object to keep it healthy and happy. 
-// Need to set interval times that reduce fullness(hunger) and happiness overtime 
-// Need to set win/loss rules
-    // Player wins after keeping pet alive after time threshold
-    // Player loses when happiness and hunger meters hit 0 before time threshold
-
 // BUTTONS
 const startBtn = document.querySelector('#start-button');
 const feedBtn = document.querySelector('#feed-button');
 const playBtn = document.querySelector('#play-button');
 const actionBtn = document.querySelector('.action-buttons');
+
 // PAGES
 let mainPage = document.querySelector('.main-screen');
 let gamePage = document.querySelector('.game-screen');
@@ -63,7 +52,6 @@ startBtn.addEventListener('click', function (e) {
 }); 
 
 // FUNCTION TOGGLE
-
 document.querySelector('.game-screen').classList.toggle('hide');
 
 function startGame() {
@@ -110,7 +98,6 @@ let hMeter = document.querySelector('#hunger')
 let hapMeter = document.querySelector('#happiness')
 
 // ALIEN NAME FUNCTION
-
 function getNameValue() {
     let alienName = document.querySelector('#name-input').value;
     document.querySelector('#alien-name').innerHTML = alienName

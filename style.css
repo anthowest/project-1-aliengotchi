@@ -44,8 +44,6 @@ p {
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    max-height: 600px;
-    max-width: 1000px;
     margin: auto;
 }
 
