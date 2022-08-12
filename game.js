@@ -47,7 +47,7 @@ class Aliengotchi {
 
 // NEW PET
 const alien = new Aliengotchi();
-console.log(alien)
+// console.log(alien)
 
 // EVENT LISTENERS
 feedBtn.addEventListener('click', function() {
@@ -71,7 +71,9 @@ function startGame() {
     document.querySelector('.game-screen').classList.toggle('hide');
     }
 
-let interval = setInterval(alienFunction, 500);    
+let interval = setInterval(alienFunction, 500); 
+// let imgInterval = setInterval(changeImg, 200);   
+// let aImg = document.querySelector('#alien-name');
 
 // ALIEN FUNCTION 
 function alienFunction() {
@@ -79,7 +81,7 @@ function alienFunction() {
     hapMeter.value = alien.happiness;
     alien.ticks();
     if ((hMeter.value <= 75) || (hapMeter.value <= 75)) {
-            // show message
+        // aImg.src = './Assets/alien-happy.png'
     };
         
     if ((hMeter.value <= 50) || (hapMeter.value <= 50)) {
@@ -87,11 +89,13 @@ function alienFunction() {
     };
         
     if ((hMeter.value <= 25) || (hapMeter.value <= 25)) {
-            // show message
+            // changeImg('./Assets/alien-sad.png');
     };
         
     if ((hMeter.value <= 0) || (hapMeter.value <= 0)) {
-            clearInterval(interval)
+        // document.querySelector('#alien-name').src = 'alien-sad.png';
+        clearInterval(interval);
+        // aImg.src = "/alien-sad.png";
     };
     }
 
@@ -106,5 +110,7 @@ function getNameValue() {
     document.querySelector('#alien-name').innerHTML = alienName
 }
 
-
+// function changeImg(a) {
+//         document.querySelector('#alien-name').src = a;
+//     };
 
