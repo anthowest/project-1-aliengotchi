@@ -46,7 +46,7 @@ p {
     justify-content: center;
     max-height: 600px;
     max-width: 1000px;
-    /* margin: auto; */
+    margin: auto;
 }
 
 #alien-name {
