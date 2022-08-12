@@ -70,22 +70,19 @@ label {
     font-size: 1rem;
 }
 
-.menu-buttons {
+.buttons {
     display: inline-block;
+    margin-inline-start: 20px;
     background-color: transparent;
     color: #7118C4;
     border: 2px solid #7118C4;
     font-weight: 700;
-}
-
-.menu-buttons a:hover {
-    background-color: #7118C4;
-    color: #fafafa;
+    ;
 }
 
 meter::-webkit-meter-bar {
     background-color: rgb(108,196,23);
-    box-shadow: 0 5px 5px -5px #999;
+    box-shadow: 0 5px 5px -5px #7118C4;
     background-size: 100% 100%;
 }
 
