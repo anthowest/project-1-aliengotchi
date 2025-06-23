@@ -14,7 +14,6 @@ let aImg = document.querySelector('#alien-body');
 let message = document.querySelector('.message');
 
 // TIME
-let ticks = 0;
 
 // NEW OBJECT
 class Aliengotchi {
@@ -29,9 +28,9 @@ class Aliengotchi {
         this.hunger -= 5;
         this.happiness += 10;
     }
-    ticks() {
-        this.hunger --;
-        this.happiness -=2;
+    tick() {
+        this.hunger--;
+        this.happiness -= 2;
     }
 }
 
@@ -57,20 +56,21 @@ document.querySelector('.game-screen').classList.toggle('hide');
 function startGame() {
     document.querySelector('.main-screen').classList.toggle('hide');
     document.querySelector('.game-screen').classList.toggle('hide');
-    }
+    interval = setInterval(alienFunction, 500);
+}    
 
 function loseAction() {
     document.querySelector('.action-buttons').classList.toggle('hide');
     aImg.src = './Assets/alien-died.png';
 }
 
-let interval = setInterval(alienFunction, 500); 
+let interval; 
 
 // ALIEN FUNCTION 
 function alienFunction() {
     hMeter.value = alien.hunger;
     hapMeter.value = alien.happiness;
-    alien.ticks();
+    alien.tick();
     if ((hMeter.value >= 60) || (hapMeter.value >= 60)) {
         aImg.src='./Assets/alien-happy.png';
     };
@@ -94,8 +94,8 @@ function alienFunction() {
     };
     }
 
-let hMeter = document.querySelector('#hunger')
-let hapMeter = document.querySelector('#happiness')
+let hMeter = document.querySelector('#hunger');
+let hapMeter = document.querySelector('#happiness');
 
 // ALIEN NAME FUNCTION
 function getNameValue() {
